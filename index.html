@@ -1,121 +1,148 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agus Somantri | Full-Stack Web Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portofolio Full-Stack Developer & Prompt Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menghubungkan ke File CSS Eksternal Anda -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 min-h-screen antialiased selection:bg-blue-500 selection:text-white">
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo-container">
-            <img src="images/logo.png" alt="Logo Agus Somantri" class="logo-img">
-        </a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 z-50">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between max-w-5xl">
+            <div class="font-bold text-lg tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                <i class="fa-solid fa-brain-circuit mr-2 text-blue-400"></i>AI-DEVELOPER
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#hero" class="hover:text-white transition">Beranda</a>
+                <a href="#keahlian" class="hover:text-white transition">Keahlian</a>
+                <a href="#proyek" class="hover:text-white transition">Produk AI</a>
+                <a href="#kontak" class="hover:text-white transition">Kontak</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#kontak" class="hidden sm:inline-block bg-gray-800 hover:bg-gray-750 text-gray-200 border border-gray-700 px-4 py-1.5 rounded-lg text-xs font-semibold transition">
+                    Konsultasi Proyek
+                </a>
+                <!-- Foto Profil Kecil di Navbar -->
+                <img src="portfolio.jpeg" alt="Profil" class="w-8 h-8 rounded-full border border-gray-700 object-cover bg-gray-800 profile-avatar">
             </div>
         </div>
     </nav>
 
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <div class="profile-img-container">
-            <img src="images/profile.jpg" alt="Agus Somantri" class="profile-img">
-        </div>
-            <h3>Halo, Saya</h3>
-            <h1>Agus Somantri</h1>
-            <h2>Full-Stack Web Developer & Entrepreneur</h2>
-            <p>Membangun solusi digital yang efisien, responsif, dan siap mengembangkan bisnis Anda.</p>
-            <a href="#projects" class="btn">Lihat Project</a>
-        </div>
-    </header>
-
-    <section id="about" class="section">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p>Saya adalah seorang <strong>Full-Stack Web Developer</strong> profesional yang berbasis di Cianjur. Berfokus pada pengembangan aplikasi web yang performatif dan scalable, saya menggabungkan keahlian teknis dengan pendekatan berorientasi bisnis untuk menciptakan alat administrasi otomatis serta platform layanan lokal yang solutif.</p>
-                <p>Selalu bersemangat untuk mempelajari teknologi baru dan mengubah ide-ide kompleks menjadi aplikasi web yang intuitif dan mudah digunakan.</p>
+    <!-- HERO SECTION -->
+    <section id="hero" class="container mx-auto px-6 pt-36 pb-20 text-center max-w-4xl min-h-[85vh] flex flex-col justify-center items-center">
+        <!-- Frame Foto Profil Utama -->
+        <div class="relative mb-6">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
+            <div class="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500">
+                <img src="portfolio.jpeg" alt="Foto Profil Utama" class="w-full h-full rounded-full object-cover bg-gray-900 border-2 border-gray-900 profile-avatar">
             </div>
+            <span class="absolute bottom-2 right-2 w-4 h-4 bg-green-500 border-2 border-gray-900 rounded-full"></span>
+        </div>
+
+        <span class="bg-blue-500/10 text-blue-400 text-xs font-semibold px-4 py-1.5 rounded-full border border-blue-500/20 uppercase tracking-wider">
+            Prompt Engineering x Full-Stack Development
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-6 tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+            Mengubah Instruksi AI Menjadi Aplikasi Berfungsi Nyata
+        </h1>
+        <p class="text-gray-400 text-base md:text-lg mt-6 leading-relaxed max-w-2xl">
+            Spesialisasi dalam merancang arsitektur aplikasi siap pakai menggunakan <strong>React.js, Node.js, MySQL</strong>, didukung optimasi instruksi otomatis tingkat tinggi berbasis <strong>Google AI Studio (Gemini API)</strong>.
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="#proyek" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition duration-300 shadow-lg shadow-blue-600/20 text-sm">
+                <i class="fa-solid fa-cubes mr-2"></i> Lihat Produk AI Saya
+            </a>
+            <a href="#keahlian" class="bg-gray-800 hover:bg-gray-750 text-gray-200 border border-gray-700 px-6 py-3 rounded-lg transition duration-300 text-sm">
+                Pelajari Kapabilitas
+            </a>
         </div>
     </section>
 
-    <section id="skills" class="section bg-light">
-        <h2 class="section-title">Keahlian</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <i class="fab fa-node-js backend-icon"></i>
-                <h3>Backend</h3>
-                <p>Node.js, Express.js, RESTful API</p>
+    <!-- CORE EXPERTISE -->
+    <section id="keahlian" class="bg-gray-850 border-y border-gray-800 py-20">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-gray-200">Keahlian & Pilar Utama</h2>
+                <p class="text-gray-400 text-xs mt-2">Kombinasi kemampuan logika pemrograman dan kecerdasan artifisial.</p>
             </div>
-            <div class="skill-card">
-                <i class="fab fa-react frontend-icon"></i>
-                <h3>Frontend</h3>
-                <p>React.js, JavaScript (ES6+), HTML5, CSS3</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database db-icon"></i>
-                <h3>Database & Tools</h3>
-                <p>MySQL, Git / Git Bash, VS Code</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <h2 class="section-title">Project Terbaru</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Smart-Edu Ultimate</h3>
-                    <p>Platform manajemen sekolah terintegrasi untuk absensi, manajemen siswa, dan keuangan sekolah.</p>
-                    <span class="tag">Node.js</span> <span class="tag">React</span> <span class="tag">MySQL</span>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-800/40 border border-gray-800 p-6 rounded-xl hover:border-gray-700 transition duration-300">
+                    <div class="p-3 bg-blue-500/10 rounded-lg w-fit mb-4 text-blue-400 text-xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Prompt Engineering</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Merancang instruksi sistem (System Instruction) berlapis pada AI Studio untuk menjamin konsistensi output data aplikasi yang aman dan bebas halusinasi.</p>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Portal Digital Cianjur</h3>
-                    <p>Website layanan publik dan informasi kebudayaan/pariwisata daerah yang dioptimalkan untuk kecepatan dan aksesibilitas.</p>
-                    <span class="tag">React.js</span> <span class="tag">Node.js</span> <span class="tag">Maps API</span>
+                <!-- Card 2 -->
+                <div class="bg-gray-800/40 border border-gray-800 p-6 rounded-xl hover:border-gray-700 transition duration-300">
+                    <div class="p-3 bg-indigo-500/10 rounded-lg w-fit mb-4 text-indigo-400 text-xl">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">Full-Stack Integration</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Membungkus kemampuan model bahasa besar ke dalam infrastruktur nyata. Memisahkan logika rahasia di Node.js dan menyajikannya lewat tampilan interaktif React.js.</p>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>Aplikasi Administrasi Bisnis</h3>
-                    <p>Sistem otomatisasi pembuatan dokumen operasional seperti rencana anggaran biaya (RAB), kwitansi, dan pengelolaan stok.</p>
-                    <span class="tag">JavaScript</span> <span class="tag">Node.js</span> <span class="tag">MySQL</span>
+                <!-- Card 3 -->
+                <div class="bg-gray-800/40 border border-gray-800 p-6 rounded-xl hover:border-gray-700 transition duration-300">
+                    <div class="p-3 bg-purple-500/10 rounded-lg w-fit mb-4 text-purple-400 text-xl">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2 text-white">MySQL & Relational Data</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Mengamankan API Key secara absolut di sisi server, serta mengelola persistensi data hasil pemrosesan AI langsung ke dalam skema database MySQL.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section bg-light">
-        <h2 class="section-title">Hubungi Saya</h2>
-        <div class="contact-container">
-            <form id="contact-form" class="contact-form">
-                <input type="text" placeholder="Nama Anda" required>
-                <input type="email" placeholder="Email Anda" required>
-                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
-                <button type="submit" class="btn">Kirim Pesan</button>
-            </form>
+    <!-- PROJECTS SECTION -->
+    <section id="proyek" class="container mx-auto px-6 py-20 max-w-5xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold tracking-tight text-white">Produk & Sistem yang Berfungsi Nyata</h2>
+            <p class="text-gray-400 mt-2 text-xs md:text-sm">Di bawah ini adalah aplikasi rill terintegrasi database yang dikembangkan dengan bantuan AI teroptimasi.</p>
         </div>
+
+        <!-- Wadah Kartu Proyek -->
+        <div id="project-container" class="grid grid-cols-1 gap-6"></div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Agus Somantri. All Rights Reserved.</p>
+    <!-- CONTACT / FOOTER -->
+    <footer id="kontak" class="border-t border-gray-800 bg-gray-950 py-16 text-center text-gray-400 text-sm">
+        <div class="container mx-auto px-6 max-w-xl">
+            <div class="p-3 bg-blue-600/10 rounded-full w-fit mx-auto mb-4 text-blue-400 text-lg">
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-200 mb-2">Ingin Membangun Solusi Berbasis AI?</h3>
+            <p class="text-gray-450 text-xs leading-relaxed mb-8">Saya melayani pembuatan Minimum Viable Product (MVP) kilat, kustomisasi web sistem instansi, integrasi API AI Studio, hingga konsultasi Prompt Engineering skala komersial.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3">
+                <a href="mailto:informatikaku2@gmail.com" class="w-full sm:w-auto bg-gray-900 border border-gray-700 hover:border-gray-600 text-gray-200 px-5 py-2.5 rounded-lg font-mono text-xs transition">
+                    <i class="fa-solid fa-envelope mr-2 text-blue-400"></i> informatikaku2@gmail.com
+                </a>
+                <a href="https://wa.me/6285658237396" target="_blank" class="w-full sm:w-auto bg-green-600/10 hover:bg-green-600/20 border border-green-500/30 text-green-400 px-5 py-2.5 rounded-lg font-mono text-xs transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Hubungi via WhatsApp
+                </a>
+            </div>
+
+            <p class="mt-12 text-gray-600 text-xs">&copy; <span id="year"></span> - Portofolio Profesional AI Developer & Prompt Engineer.</p>
+        </div>
     </footer>
 
+    <!-- Menghubungkan ke File JavaScript Eksternal -->
     <script src="script.js"></script>
 </body>
 </html>
